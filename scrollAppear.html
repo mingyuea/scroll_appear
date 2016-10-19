@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        /*The primary function of this set of Javascript and JQuery code was to write a function that allowed elements to appear and disappear as they were scrolled to. This is different from JQuery fadeIn/fadeOut and hide/show, because the element still takes up space within the document. Note that what actually happens here is the element's opacity is brought close to 0, but not quite. Technically, the element is not absolutely invisible. The height specifications and distances can be adjusted as seen fit as the user decides to -Ming Yue*/
+        section{
+            font-size:20px;
+        }
+        #one{
+            background-color:black;
+            color:white;
+        }
+        .appear{
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            animation-timing-function:linear;
+            animation-name:fadingIn;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadingIn{
+            from{opacity: 0.001;} 
+            to{opacity: 1;}
+        }
+        .disappear{
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-timing-function:linear;
+            animation-name:fadingOut;  
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadingOut{
+            from{opacity:1;}
+            to{opacity:0.001;}
+        }
+        
+    </style>
+    <head>
+    <script src="jquery-3.1.0.min.js"></script>
+    </head>
+    <body>
+    <section id="open">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo enim et nisl gravida molestie. Nulla elementum ac ex ac dictum. Quisque posuere, est ut egestas auctor, ex ipsum ornare massa, non tempus felis nibh ut tortor. Curabitur vestibulum justo ac turpis egestas, ut rhoncus dolor varius. Nunc non interdum nisl. Phasellus ut gravida erat. Nulla facilisi. Integer eu condimentum turpis. Praesent vitae felis viverra, placerat velit a, luctus sapien. Maecenas aliquam molestie augue, non maximus sapien sollicitudin vel. In ornare, ipsum a pulvinar euismod, eros mauris faucibus nisi, bibendum pretium lacus nibh ac lacus. Ut efficitur euismod libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+        <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc at maximus arcu. Aenean hendrerit volutpat leo eget condimentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus vitae facilisis justo. Aenean bibendum accumsan mi porta iaculis. Sed ullamcorper posuere sapien vel tincidunt. Nunc quis vulputate ante, eu tincidunt leo. Integer pellentesque, nulla ut facilisis feugiat, mi leo tincidunt sem, eget laoreet enim turpis vel nisl. Sed et nulla ultricies, pretium mi at, malesuada dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus, urna nec molestie viverra, justo quam viverra urna, ut porta ipsum tortor ac tortor.</p>
+
+        Donec vel tortor sed nunc posuere lacinia ac nec massa. Integer tempor aliquet venenatis. Nulla in est eu enim bibendum pellentesque. Aliquam nisl urna, posuere ut tortor vitae, hendrerit maximus turpis. Quisque luctus est sit amet turpis hendrerit, eget suscipit orci porttitor. Quisque sollicitudin semper lacinia. Morbi hendrerit nisl et sapien scelerisque, sit amet iaculis nisi tristique. Sed ultrices sollicitudin eleifend. Nulla gravida mollis ex, a sollicitudin mauris mollis eu. Phasellus non sollicitudin lectus. Vestibulum vel finibus metus, eget varius dolor. Suspendisse tempor arcu non metus venenatis lacinia. Pellentesque tincidunt orci at lorem auctor, nec efficitur dolor tempor. Suspendisse maximus neque eu mauris accumsan vulputate. Duis fringilla ultricies sapien.
+
+        Morbi ut nunc vestibulum, congue enim ut, imperdiet nulla. Nulla non eleifend tortor. Ut maximus, justo a accumsan vestibulum, nunc dui laoreet nibh, in imperdiet odio elit interdum arcu. Pellentesque justo est, gravida et neque nec, pellentesque lobortis odio. Pellentesque odio massa, feugiat at turpis nec, porta malesuada orci. Praesent lacinia metus vitae volutpat semper. Nam est nisl, finibus a nibh et, auctor mattis neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed pulvinar malesuada dui. Sed sed ligula id nulla tincidunt sodales ut at quam. Nullam rhoncus rutrum est, vel iaculis lectus lobortis et. In ultricies malesuada ligula, in semper est fringilla et. Nunc porta elit sit amet vestibulum laoreet. In nec fermentum mi, ut dictum diam.</p></section>
+
+        <section id="one" ><p id="para" class="disappear">Aenean at dignissim erat. Mauris ac dignissim quam. Nam lacus est, aliquet ac iaculis vel, molestie eu enim. Aenean feugiat nec arcu ut vestibulum. Sed vitae lorem lacus. Nulla sed ante et ipsum iaculis gravida at malesuada sem. Proin eu turpis in dui tempus dictum. Sed fermentum felis sit amet felis tempor, vitae finibus lectus lacinia. Fusce eget suscipit velit. Nulla facilisi. Sed consequat venenatis convallis. Donec eget nibh sapien. Mauris quis cursus lectus, nec dignissim libero. Morbi condimentum nisl sed elit iaculis, ac malesuada ligula varius. Curabitur blandit elementum diam, luctus faucibus lectus placerat vel.
+
+        Donec et lacinia erat. Mauris vel nibh ac quam accumsan vestibulum. Duis sodales, metus et sodales feugiat, metus turpis accumsan augue, in pellentesque massa ante vel arcu. Donec     sagittis arcu quis velit tristique, ut commodo tellus dignissim. Phasellus nibh urna, rhoncus varius mauris et, auctor aliquet nisl. Integer erat odio, feugiat nec dui et, convallis malesuada nulla. Duis molestie, diam a ultrices accumsan, dui magna tincidunt magna, et vulputate dui leo a mi. Aliquam et justo urna. Nam massa libero, faucibus nec ex eget, ultricies eleifend ligula. Suspendisse sed velit ut felis semper volutpat. Praesent congue, tellus in euismod ultrices, diam dolor ultricies sapien, ut auctor sapien felis aliquam magna. Aliquam nec arcu elit.
+
+        Pellentesque ac nunc eu justo cursus viverra. Fusce commodo interdum ultricies. Suspendisse suscipit consectetur turpis, nec pharetra enim pharetra vel. Nam aliquet blandit nulla quis feugiat. Donec congue metus at tincidunt rhoncus. Quisque eu ipsum hendrerit, vestibulum felis in, imperdiet quam. Donec in pellentesque tellus. Nam vel enim ac augue tincidunt elementum congue sit amet risus. Vivamus vestibulum et tellus non pulvinar. Aenean quis nulla tincidunt, ornare magna egestas, fringilla mauris. Aliquam leo est, efficitur ac maximus non, vehicula a enim.</p>
+    </section>
+    <section id="close">
+        <p>Donec vel tortor sed nunc posuere lacinia ac nec massa. Integer tempor aliquet venenatis. Nulla in est eu enim bibendum pellentesque. Aliquam nisl urna, posuere ut tortor vitae, hendrerit maximus turpis. Quisque luctus est sit amet turpis hendrerit, eget suscipit orci porttitor. Quisque sollicitudin semper lacinia. Morbi hendrerit nisl et sapien scelerisque, sit amet iaculis nisi tristique. Sed ultrices sollicitudin eleifend. Nulla gravida mollis ex, a sollicitudin mauris mollis eu. Phasellus non sollicitudin lectus. Vestibulum vel finibus metus, eget varius dolor. Suspendisse tempor arcu non metus venenatis lacinia. Pellentesque tincidunt orci at lorem auctor, nec efficitur dolor tempor. Suspendisse maximus neque eu mauris accumsan vulputate. Duis fringilla ultricies sapien.
+
+        Morbi ut nunc vestibulum, congue enim ut, imperdiet nulla. Nulla non eleifend tortor. Ut maximus, justo a accumsan vestibulum, nunc dui laoreet nibh, in imperdiet odio elit interdum arcu. Pellentesque justo est, gravida et neque nec, pellentesque lobortis odio. Pellentesque odio massa, feugiat at turpis nec, porta malesuada orci. Praesent lacinia metus vitae volutpat semper. Nam est nisl, finibus a nibh et, auctor mattis neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed pulvinar malesuada dui. Sed sed ligula id nulla tincidunt sodales ut at quam. Nullam rhoncus rutrum est, vel iaculis lectus lobortis et. In ultricies malesuada ligula, in semper est fringilla et. Nunc porta elit sit amet vestibulum laoreet. In nec fermentum mi, ut dictum diam.</p>
+        <p>Donec vel tortor sed nunc posuere lacinia ac nec massa. Integer tempor aliquet venenatis. Nulla in est eu enim bibendum pellentesque. Aliquam nisl urna, posuere ut tortor vitae, hendrerit maximus turpis. Quisque luctus est sit amet turpis hendrerit, eget suscipit orci porttitor. Quisque sollicitudin semper lacinia. Morbi hendrerit nisl et sapien scelerisque, sit amet iaculis nisi tristique. Sed ultrices sollicitudin eleifend. Nulla gravida mollis ex, a sollicitudin mauris mollis eu. Phasellus non sollicitudin lectus. Vestibulum vel finibus metus, eget varius dolor. Suspendisse tempor arcu non metus venenatis lacinia. Pellentesque tincidunt orci at lorem auctor, nec efficitur dolor tempor. Suspendisse maximus neque eu mauris accumsan vulputate. Duis fringilla ultricies sapien.
+
+        Morbi ut nunc vestibulum, congue enim ut, imperdiet nulla. Nulla non eleifend tortor. Ut maximus, justo a accumsan vestibulum, nunc dui laoreet nibh, in imperdiet odio elit interdum arcu. Pellentesque justo est, gravida et neque nec, pellentesque lobortis odio. Pellentesque odio massa, feugiat at turpis nec, porta malesuada orci. Praesent lacinia metus vitae volutpat semper. Nam est nisl, finibus a nibh et, auctor mattis neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed pulvinar malesuada dui. Sed sed ligula id nulla tincidunt sodales ut at quam. Nullam rhoncus rutrum est, vel iaculis lectus lobortis et. In ultricies malesuada ligula, in semper est fringilla et. Nunc porta elit sit amet vestibulum laoreet. In nec fermentum mi, ut dictum diam.</p>
+    </section>
+    <div id="notif">Hello</div>
+        
+        <script>
+            $(document).ready(function(){
+                var coord=$("#one").offset();
+                var viewport=$(window);
+               
+                /*document.getElementById("notif").innerHTML="onetop:"+coord.top+" onebottom:    "+(coord.top+$("#one").outerHeight())+" viewport top:"+viewport.scrollTop()+"height:"+$("#one").outerHeight()+"   vp ht:"+viewport.height();
+                console.log(viewport.scrollTop());*/
+                
+                if((coord.top<=(viewport.scrollTop()+400))&&((coord.top+$("#one").outerHeight()-150)>=viewport.scrollTop())){  //if the top if the window is 400px away from the top of the element, or if the bottom of the element is 150px away from the top of the window, the element appears by fading in. These two margins can be adjusted as seen fit.Else the element will fade out.
+                    $("#para").removeClass("disappear");
+                    $("#para").addClass("appear");
+                }
+                else{
+                    $("#para").removeClass("appear");
+                    $("#para").addClass("disappear");
+                }
+                $(window).scroll(function(){  //this binds the disappearing and reappearing of the element to the scroll event, allowing the element to appear/disappear as it is scrolled to and away, respectively
+                    if((coord.top<=(viewport.scrollTop()+400))&&((coord.top+$("#one").outerHeight()-150)>=viewport.scrollTop())){
+                        $("#para").removeClass("disappear");
+                        $("#para").addClass("appear");
+                    }
+                    else{
+                        $("#para").removeClass("appear");
+                        $("#para").addClass("disappear");
+                }   
+                })
+            })
+        </script>
+    </body>
+</html>
